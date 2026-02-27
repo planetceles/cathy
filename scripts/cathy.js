@@ -1,3 +1,20 @@
+const year = document.getElementById("current-year");
+if (year) {
+    const today = new Date();
+    year.textContent = today.getFullYear();
+}
+const hamButton = document.querySelector("#menu");
+const navLinks = document.querySelector(".nav-links");
+
+if (hamButton && navLinks) {
+    hamButton.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        hamButton.classList.toggle("open");
+
+        hamButton.setAttribute("aria-expanded", isOpen);
+    });
+}
+
 
 const events = [
 
